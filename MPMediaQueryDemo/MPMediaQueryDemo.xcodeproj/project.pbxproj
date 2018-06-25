@@ -14,6 +14,8 @@
 		9752792A20E0CA240013FBB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9752792820E0CA240013FBB3 /* LaunchScreen.storyboard */; };
 		9752793520E0CA240013FBB3 /* MPMediaQueryDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752793420E0CA240013FBB3 /* MPMediaQueryDemoTests.swift */; };
 		9752794020E0CA240013FBB3 /* MPMediaQueryDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752793F20E0CA240013FBB3 /* MPMediaQueryDemoUITests.swift */; };
+		9752794E20E0D09D0013FBB3 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752794D20E0D09D0013FBB3 /* MusicViewController.swift */; };
+		9752795220E0D4790013FBB3 /* MusicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752795120E0D4790013FBB3 /* MusicData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9752793B20E0CA240013FBB3 /* MPMediaQueryDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MPMediaQueryDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9752793F20E0CA240013FBB3 /* MPMediaQueryDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPMediaQueryDemoUITests.swift; sourceTree = "<group>"; };
 		9752794120E0CA240013FBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9752794D20E0D09D0013FBB3 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		9752795120E0D4790013FBB3 /* MusicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				9752791F20E0CA230013FBB3 /* AppDelegate.swift */,
 				9752792120E0CA230013FBB3 /* ViewController.swift */,
+				9752794D20E0D09D0013FBB3 /* MusicViewController.swift */,
+				9752795120E0D4790013FBB3 /* MusicData.swift */,
 				9752792320E0CA230013FBB3 /* Main.storyboard */,
 				9752792620E0CA240013FBB3 /* Assets.xcassets */,
 				9752792820E0CA240013FBB3 /* LaunchScreen.storyboard */,
@@ -256,6 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9752794E20E0D09D0013FBB3 /* MusicViewController.swift in Sources */,
+				9752795220E0D4790013FBB3 /* MusicData.swift in Sources */,
 				9752792220E0CA230013FBB3 /* ViewController.swift in Sources */,
 				9752792020E0CA230013FBB3 /* AppDelegate.swift in Sources */,
 			);
@@ -433,6 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P72ZUNZG2W;
 				INFOPLIST_FILE = MPMediaQueryDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P72ZUNZG2W;
 				INFOPLIST_FILE = MPMediaQueryDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
