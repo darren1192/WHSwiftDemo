@@ -21,6 +21,7 @@ class AnimationGroupViewController: UIViewController {
         animationView.backgroundColor = UIColor.red
         self.view.addSubview(animationView)
         
+    
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1.5) {
             let transition = CABasicAnimation.init(keyPath: "transform.translation.x")
             transition.toValue = 300

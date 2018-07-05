@@ -22,7 +22,19 @@ class TransitionViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
-    let titleArray = ["cube","moveIn","reveal","fade","pageCurl","pageUnCurl","suckEffect","rippleEffect","oglFlip","rotate","push","cameraIrisHollowOpen","cameraIrisHollowClose"]
+    let titleArray = ["cube",
+                      "moveIn",
+                      "reveal",
+                      "fade",
+                      "pageCurl",
+                      "pageUnCurl",
+                      "suckEffect",
+                      "rippleEffect",
+                      "oglFlip",
+                      "rotate",
+                      "push",
+                      "cameraIrisHollowOpen",
+                      "cameraIrisHollowClose"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
