@@ -31,9 +31,13 @@ class BasicAnimationViewController: UIViewController,CAAnimationDelegate {
         animationView = UIView.init(frame: CGRect.init(x: 200, y: 200, width: 80, height: 80))
         animationView.backgroundColor = UIColor.red
         self.view.addSubview(animationView)
-        
-        
-        
+  
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     @objc private func blick(button: UIButton){
         var animation = CABasicAnimation()
