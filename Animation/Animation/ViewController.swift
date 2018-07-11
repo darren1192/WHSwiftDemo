@@ -35,6 +35,7 @@ class ViewController: UIViewController {
             button.layer.cornerRadius = 12
             self.view.addSubview(button)
         }
+        
     }
     
     @objc private func blick(button: UIButton){
