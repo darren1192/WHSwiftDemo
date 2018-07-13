@@ -41,29 +41,24 @@ class KeyframeAnimationViewController: UIViewController {
             path.addEllipse(in: CGRect.init(x: 0, y: 0, width: 320, height: 500))
             animation.path = path
             animation.rotationMode = kCAAnimationRotateAuto
-            break
         case 1:
             let path = UIBezierPath()
             path.move(to: self.animationView.center)
             path.addQuadCurve(to: CGPoint.init(x: 0, y: 500), controlPoint: CGPoint.init(x: 400, y: 100))
             animation.path = path.cgPath
-            break
         case 2:
             let path = UIBezierPath()
             path.move(to: .zero)
             path.addCurve(to: self.animationView.center, controlPoint1: CGPoint.init(x: 0, y: 500), controlPoint2: CGPoint.init(x: 400, y: 100))
             animation.path = path.cgPath
-            break
         case 3:
             let path = UIBezierPath()
             path.move(to: .zero)
             path.addCurve(to: self.animationView.center, controlPoint1: CGPoint.init(x: 320, y: 100), controlPoint2: CGPoint.init(x: 0, y: 400))
             animation.path = path.cgPath
-            break
         case 4:
             let path = UIBezierPath.init(arcCenter: self.view.center, radius: 150, startAngle: -CGFloat.pi*0.5, endAngle: CGFloat.pi*2, clockwise: true)
             animation.path = path.cgPath
-            break
         case 5:
             let point = CGPoint.init(x: self.view.center.x, y: 400)
             let xLength = point.x - self.animationView.center.x
@@ -82,7 +77,6 @@ class KeyframeAnimationViewController: UIViewController {
                 }
             }
             animation.path = path
-            break
         case 6:
             animation = CAKeyframeAnimation.init(keyPath: "transform.rotation")
             let angle = CGFloat.pi/4 * 0.5
@@ -90,14 +84,12 @@ class KeyframeAnimationViewController: UIViewController {
             animation.values = values
             animation.repeatCount = 4
             animation.duration = 0.5
-            break
         case 7:
             let p1 = NSValue.init(cgPoint: self.animationView.center)
             let p2 = NSValue.init(cgPoint: CGPoint.init(x: self.view.center.x + 100, y: 200))
             let p3 = NSValue.init(cgPoint: CGPoint.init(x: self.view.center.x, y: 300))
             animation.values = [p1, p2, p3]
             animation.duration = 0.5
-            break
         default:
             break
         }

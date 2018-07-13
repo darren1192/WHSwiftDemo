@@ -46,19 +46,16 @@ class BasicAnimationViewController: UIViewController,CAAnimationDelegate {
             animation = CABasicAnimation.init(keyPath: "opacity")
             animation.fromValue = 1.0
             animation.toValue = 0.1
-            break
         case 1:
             animation = CABasicAnimation.init(keyPath: "transform.scale")
             animation.fromValue = 1.0
             animation.toValue = 0.5
-            break
         case 2:
             animation = CABasicAnimation.init(keyPath: "transform.rotation")
             animation.toValue = CGFloat.pi
         case 3:
             animation = CABasicAnimation.init(keyPath: "position")
             animation.toValue = NSValue.init(cgPoint: CGPoint.init(x: self.animationView.center.x, y: self.animationView.center.y-100))
-            break
         default:
             break
         }
