@@ -34,13 +34,10 @@ class ViewController: UIViewController {
         switch tag - 100 {
         case 0:
             self.navigationController?.pushViewController(ViewControllerOne(), animated: true)
-            break
         case 1:
             self.navigationController?.pushViewController(ViewControllerTwo(), animated: true)
-            break
         case 2:
             self.navigationController?.pushViewController(ViewControllerThree(), animated: true)
-            break
         default:
             break
         }

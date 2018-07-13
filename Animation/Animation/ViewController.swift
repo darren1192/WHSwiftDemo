@@ -12,7 +12,7 @@
         CABasicAnimation{
             CASpringAnimation
         }
-    CAKeyframeAnimation
+        CAKeyframeAnimation
  }
     CATransition
     CAAnimationGroup
@@ -43,23 +43,18 @@ class ViewController: UIViewController {
         case 0:
             let vc = BasicAnimationViewController()
             self.navigationController?.pushViewController(vc, animated: true)
-            break
         case 1:
             let vc = SpringAnimationViewController()
             self.navigationController?.pushViewController(vc, animated: true)
-            break
         case 2:
             let vc = KeyframeAnimationViewController()
             self.navigationController?.pushViewController(vc, animated: true)
-            break
         case 3:
             let vc = TransitionViewController()
             self.navigationController?.pushViewController(vc, animated: true)
-            break
         case 4:
             let vc = AnimationGroupViewController()
             self.navigationController?.pushViewController(vc, animated: true)
-            break
         default:
             break
         }

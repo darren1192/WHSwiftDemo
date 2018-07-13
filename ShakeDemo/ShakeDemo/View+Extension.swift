@@ -26,10 +26,8 @@ extension UIView {
         UIView.animate(withDuration: interval, animations: {
             switch directyion {
             case .horizontal: self.layer.setAffineTransform(CGAffineTransform.init(translationX: detal, y: 0))
-                break
             case .vertical:
             self.layer.setAffineTransform(CGAffineTransform.init(translationX: 0, y: detal))
-                break
             }
         }) { (complete) in
             if times == 0 {
