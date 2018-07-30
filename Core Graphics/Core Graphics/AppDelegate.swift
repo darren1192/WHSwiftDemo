@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  CustomNavigationController
+//  Core Graphics
 //
-//  Created by share2glory on 2018/6/28.
+//  Created by share2glory on 2018/7/27.
 //  Copyright © 2018年 WH. All rights reserved.
 //
 
@@ -16,13 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        self.window = UIWindow.init(frame: UIScreen.main.bounds)
-        self.window?.backgroundColor = UIColor.white
-        self.window?.makeKeyAndVisible()
-        let nav = UINavigationController.init(rootViewController: ViewController())
-        self.window?.rootViewController = nav
-        
         return true
     }
 

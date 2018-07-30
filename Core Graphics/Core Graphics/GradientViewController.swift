@@ -1,14 +1,14 @@
 //
-//  CustomNavigationController.swift
-//  CustomNavigationController
+//  GradientViewController.swift
+//  Core Graphics
 //
-//  Created by share2glory on 2018/6/28.
+//  Created by share2glory on 2018/7/30.
 //  Copyright © 2018年 WH. All rights reserved.
 //
 
 import UIKit
 
-class CustomNavigationController: UINavigationController {
+class GradientViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

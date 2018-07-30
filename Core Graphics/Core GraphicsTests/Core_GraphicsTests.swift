@@ -1,15 +1,15 @@
 //
-//  CustomNavigationControllerTests.swift
-//  CustomNavigationControllerTests
+//  Core_GraphicsTests.swift
+//  Core GraphicsTests
 //
-//  Created by share2glory on 2018/6/28.
+//  Created by share2glory on 2018/7/27.
 //  Copyright © 2018年 WH. All rights reserved.
 //
 
 import XCTest
-@testable import CustomNavigationController
+@testable import Core_Graphics
 
-class CustomNavigationControllerTests: XCTestCase {
+class Core_GraphicsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
