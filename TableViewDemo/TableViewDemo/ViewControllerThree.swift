@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerThree: UIViewController,UITableViewDelegate, UITableViewDataSource  {
+class ViewControllerThree: UIViewController {
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView.init(frame: CGRect.zero, style: .grouped)
@@ -56,6 +56,15 @@ class ViewControllerThree: UIViewController,UITableViewDelegate, UITableViewData
         }
         
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+// MARK: UITableViewDataSource
+extension ViewControllerThree: UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionModels.count
     }
@@ -69,15 +78,19 @@ class ViewControllerThree: UIViewController,UITableViewDelegate, UITableViewData
         cell.textLabel?.text = "第\(indexPath.section)列 第\(indexPath.row)行"
         return cell
     }
+}
+
+// MARK: UITableViewDelegate
+extension ViewControllerThree: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("select in : \(indexPath)")
     }
-
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? TableViewHeaderView
         if headerView == nil {
@@ -96,29 +109,12 @@ class ViewControllerThree: UIViewController,UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 44
     }
-    
+
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
-    
+
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

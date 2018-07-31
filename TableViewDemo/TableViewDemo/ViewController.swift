@@ -11,12 +11,13 @@ import UIKit
 let screenWidth = UIScreen.main.bounds.width
 let screenHeight = UIScreen.main.bounds.height
 let isIhponeX = (screenHeight == 812) ? true : false
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.red
+        self.view.backgroundColor = UIColor.white
         let titleArray = ["最简单的tableview","tableview 自定义cell","收起效果"]
         for i in 0..<titleArray.count {
             let button = UIButton.init(frame: CGRect.init(x: 50, y: 100+CGFloat(i)*50, width: screenWidth - 100, height: 40))

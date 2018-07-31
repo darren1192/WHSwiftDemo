@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerTwo: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewControllerTwo: UIViewController {
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -38,13 +38,18 @@ class ViewControllerTwo: UIViewController, UITableViewDelegate, UITableViewDataS
             let item  = CellData.init(names[i], headImg: UIImage.init(named: "mine_d")!)
             cellItems.append(item)
         }
-        
     }
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
+
+}
+//MARK: UITableViewDataSource
+extension ViewControllerTwo: UITableViewDataSource{
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellItems.count
     }
@@ -54,7 +59,9 @@ class ViewControllerTwo: UIViewController, UITableViewDelegate, UITableViewDataS
         cell?.data = cellItems[indexPath.row]
         return cell!
     }
-    
+}
+// MARK: UITableViewDelegate
+extension ViewControllerTwo: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as? TableViewCellTwo
         if let data = cell?.data {
@@ -62,19 +69,14 @@ class ViewControllerTwo: UIViewController, UITableViewDelegate, UITableViewDataS
             self.showAlertWithMessage(title: title)
         }
     }
-    
-    func showAlertWithMessage(title: String){
+}
+
+extension ViewControllerTwo{
+    fileprivate func showAlertWithMessage(title: String){
         let alert = UIAlertController.init(title: title, message: nil, preferredStyle: UIAlertControllerStyle.alert)
         self.present(alert, animated: true, completion: nil)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             self.presentedViewController?.dismiss(animated: true, completion: nil)
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
 }

@@ -13,7 +13,7 @@ class Address: NSObject {
     var provice: String = ""
 }
 
-class ViewControllerOne: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewControllerOne: UIViewController{
     private lazy var tableView = UITableView()
 
     override func viewDidLoad() {
@@ -25,16 +25,19 @@ class ViewControllerOne: UIViewController, UITableViewDelegate, UITableViewDataS
         self.title = "简单的tableView"
         
         tableView.frame = self.view.frame
-        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(tableView)
 
     }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
+}
+// MARK: UITableViewDataSource
+extension ViewControllerOne: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -42,14 +45,7 @@ class ViewControllerOne: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "第" + "\(indexPath.row)" + "行" 
+        cell.textLabel?.text = "第" + "\(indexPath.row)" + "行"
         return cell
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
 }
