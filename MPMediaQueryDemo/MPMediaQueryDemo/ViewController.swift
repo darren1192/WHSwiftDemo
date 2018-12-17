@@ -39,7 +39,7 @@ class ViewController: UIViewController {
                         self.navigationController?.pushViewController(vc, animated: true)
                     }else {
                         print("not permissions")
-                        let url = URL.init(string: UIApplicationOpenSettingsURLString)
+                        let url = URL.init(string: UIApplication.openSettingsURLString)
                         UIApplication.shared.openURL(url!)
                     }
                 }

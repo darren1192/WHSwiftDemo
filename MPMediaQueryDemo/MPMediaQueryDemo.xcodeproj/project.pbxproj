@@ -202,10 +202,12 @@
 					};
 					9752792F20E0CA240013FBB3 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 						TestTargetID = 9752791B20E0CA230013FBB3;
 					};
 					9752793A20E0CA240013FBB3 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 						TestTargetID = 9752791B20E0CA230013FBB3;
 					};
 				};
@@ -448,7 +450,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.MPMediaQueryDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -467,7 +469,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.MPMediaQueryDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -487,7 +489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.MPMediaQueryDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MPMediaQueryDemo.app/MPMediaQueryDemo";
 			};
@@ -508,7 +510,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.MPMediaQueryDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MPMediaQueryDemo.app/MPMediaQueryDemo";
 			};
@@ -528,7 +530,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.MPMediaQueryDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MPMediaQueryDemo;
 			};
@@ -548,7 +550,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.MPMediaQueryDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MPMediaQueryDemo;
 			};

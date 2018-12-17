@@ -62,9 +62,9 @@ class BasicAnimationViewController: UIViewController,CAAnimationDelegate {
         animation.delegate = self
         animation.duration = 0.25
         animation.isRemovedOnCompletion = false
-        animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeInEaseOut)
         animation.autoreverses = true
-        animation.fillMode = kCAFillModeBoth
+        animation.fillMode = CAMediaTimingFillMode.both
         self.animationView.layer.add(animation, forKey: "baseanimation")
     }
     

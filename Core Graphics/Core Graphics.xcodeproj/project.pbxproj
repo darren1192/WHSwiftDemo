@@ -220,10 +220,12 @@
 					};
 					97527345210B04E9006C8C45 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 97527331210B04E7006C8C45;
 					};
 					97527350210B04E9006C8C45 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 97527331210B04E7006C8C45;
 					};
 				};
@@ -472,7 +474,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "S2G.Core-Graphics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -491,7 +493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "S2G.Core-Graphics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -511,7 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "S2G.Core-GraphicsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Core Graphics.app/Core Graphics";
 			};
@@ -532,7 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "S2G.Core-GraphicsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Core Graphics.app/Core Graphics";
 			};
@@ -552,7 +554,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "S2G.Core-GraphicsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Core Graphics";
 			};
@@ -572,7 +574,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "S2G.Core-GraphicsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Core Graphics";
 			};

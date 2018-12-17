@@ -38,7 +38,7 @@ class AnimationGroupViewController: UIViewController {
             group.duration = 2
             group.animations = [transition, rotation, scale]
             group.isRemovedOnCompletion = false
-            group.fillMode = kCAFillModeForwards
+            group.fillMode = CAMediaTimingFillMode.forwards
             
             self.animationView.layer.add(group, forKey: nil)
         }

@@ -40,7 +40,7 @@ class KeyframeAnimationViewController: UIViewController {
             let path = CGMutablePath()
             path.addEllipse(in: CGRect.init(x: 0, y: 0, width: 320, height: 500))
             animation.path = path
-            animation.rotationMode = kCAAnimationRotateAuto
+            animation.rotationMode = CAAnimationRotationMode.rotateAuto
         case 1:
             let path = UIBezierPath()
             path.move(to: self.animationView.center)
@@ -96,13 +96,13 @@ class KeyframeAnimationViewController: UIViewController {
         if tag < 6 {
             animation.duration = 0.5
             animation.isRemovedOnCompletion = false
-            animation.fillMode = kCAFillModeBoth
+            animation.fillMode = CAMediaTimingFillMode.both
             self.animationView.layer.add(animation, forKey: nil)
         }else {
             UIGraphicsBeginImageContext(self.view.frame.size)
-            animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+            animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeInEaseOut)
             animation.isRemovedOnCompletion = false
-            animation.fillMode = kCAFillModeBoth
+            animation.fillMode = CAMediaTimingFillMode.both
             self.animationView.layer.add(animation, forKey: nil)
         }
         

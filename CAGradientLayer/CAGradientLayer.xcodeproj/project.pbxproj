@@ -199,10 +199,12 @@
 					};
 					97B2943B20E4CD1D0038504B = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 						TestTargetID = 97B2942720E4CD1C0038504B;
 					};
 					97B2944620E4CD1D0038504B = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 						TestTargetID = 97B2942720E4CD1C0038504B;
 					};
 				};
@@ -444,7 +446,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.CAGradientLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -463,7 +465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.CAGradientLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -483,7 +485,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.CAGradientLayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAGradientLayer.app/CAGradientLayer";
 			};
@@ -504,7 +506,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.CAGradientLayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAGradientLayer.app/CAGradientLayer";
 			};
@@ -524,7 +526,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.CAGradientLayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CAGradientLayer;
 			};
@@ -544,7 +546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = S2G.CAGradientLayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CAGradientLayer;
 			};

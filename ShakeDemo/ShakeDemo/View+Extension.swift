@@ -13,6 +13,7 @@ public enum ShakeDirection: Int{
     case horizontal
     case vertical
 }
+// extension
 extension UIView {
     /**
      扩展UIView增加抖动方法
@@ -28,6 +29,35 @@ extension UIView {
             case .horizontal: self.layer.setAffineTransform(CGAffineTransform.init(translationX: detal, y: 0))
             case .vertical:
             self.layer.setAffineTransform(CGAffineTransform.init(translationX: 0, y: detal))
+            }
+        }) { (complete) in
+            if times == 0 {
+                UIView.animate(withDuration: interval, animations: {
+                    self.layer.setAffineTransform(CGAffineTransform.identity)
+                }, completion: { (complete) in
+                    completion?()
+                })
+            }else {
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                self.shake(directyion: directyion, times: times - 1, interval: interval, detal: detal * -1, completion: completion)
+            }
+        }
+    }
+}
+
+
+// POP
+protocol Shakeable {
+    
+}
+
+extension Shakeable where Self: UIView {
+    func shake(directyion: ShakeDirection = .horizontal,times: Int = 2, interval: TimeInterval = 0.1, detal: CGFloat = 2,completion:(() -> Void)? = nil ){
+        UIView.animate(withDuration: interval, animations: {
+            switch directyion {
+            case .horizontal: self.layer.setAffineTransform(CGAffineTransform.init(translationX: detal, y: 0))
+            case .vertical:
+                self.layer.setAffineTransform(CGAffineTransform.init(translationX: 0, y: detal))
             }
         }) { (complete) in
             if times == 0 {

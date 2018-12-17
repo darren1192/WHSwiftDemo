@@ -35,7 +35,7 @@ class ViewControllerThree: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.title = "收起效果"
         if #available(iOS 11.0, *){
-            self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
+            self.tableView.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
         }else {
             self.automaticallyAdjustsScrollViewInsets = false
         }

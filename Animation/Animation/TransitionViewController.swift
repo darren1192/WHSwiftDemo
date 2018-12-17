@@ -68,13 +68,13 @@ class TransitionViewController: UIViewController, UITableViewDelegate, UITableVi
         if let type = cell?.textLabel?.text {
             let animation = CATransition()
             animation.duration = 0.6
-            animation.fillMode = kCAFillModeForwards
-            animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
-            animation.type = type
+            animation.fillMode = CAMediaTimingFillMode.forwards
+            animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeInEaseOut)
+            animation.type = CATransitionType(rawValue: type)
             if type != "rotate"{
-                animation.subtype = kCATransitionFromLeft
+                animation.subtype = CATransitionSubtype.fromLeft
             }else {
-                animation.subtype = "90cw"
+                animation.subtype = CATransitionSubtype(rawValue: "90cw")
             }
             self.animationView.layer.add(animation, forKey: nil)
         }

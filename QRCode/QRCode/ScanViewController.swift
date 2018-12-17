@@ -78,7 +78,7 @@ class ScanViewController: UIViewController {
         let startPotion = CGPoint.init(x: lineImageView.center.x, y: 1)
         let endPotion = CGPoint.init(x: lineImageView.center.x, y: scanImageView.bounds.height-1)
         let translation = CABasicAnimation.init(keyPath: "position")
-        translation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+        translation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeInEaseOut)
         translation.fromValue = startPotion
         translation.toValue = endPotion
         translation.duration = 5
@@ -150,9 +150,8 @@ extension ScanViewController: AVCaptureMetadataOutputObjectsDelegate{
 
 extension ScanViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
         let ciImage = CIImage.init(image: image)!
         let context = CIContext.init(options: nil)
         let detector = CIDetector.init(ofType: CIDetectorTypeQRCode, context: context, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])

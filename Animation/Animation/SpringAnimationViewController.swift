@@ -37,7 +37,7 @@ class SpringAnimationViewController: UIViewController {
         springAnimation.duration = springAnimation.settlingDuration
         springAnimation.fromValue = self.animationView.center.y
         springAnimation.toValue = self.animationView.center.y + 100
-        springAnimation.fillMode = kCAFillModeForwards
+        springAnimation.fillMode = CAMediaTimingFillMode.forwards
         self.animationView.layer.add(springAnimation, forKey: "spring")
     }
     

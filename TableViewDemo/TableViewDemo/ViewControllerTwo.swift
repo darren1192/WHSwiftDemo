@@ -73,7 +73,7 @@ extension ViewControllerTwo: UITableViewDelegate{
 
 extension ViewControllerTwo{
     fileprivate func showAlertWithMessage(title: String){
-        let alert = UIAlertController.init(title: title, message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController.init(title: title, message: nil, preferredStyle: UIAlertController.Style.alert)
         self.present(alert, animated: true, completion: nil)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             self.presentedViewController?.dismiss(animated: true, completion: nil)

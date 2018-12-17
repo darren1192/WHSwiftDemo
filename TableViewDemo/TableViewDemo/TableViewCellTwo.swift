@@ -30,7 +30,7 @@ class TableViewCellTwo: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
         headImgV.frame = CGRect.init(x: 12, y: 0, width: 30, height: 30)

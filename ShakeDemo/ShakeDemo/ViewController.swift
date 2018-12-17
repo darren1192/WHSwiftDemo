@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Shakeable {
 
     private lazy var shakeHorizontalBtn: UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: .custom)
         button.backgroundColor = UIColor.gray
         button.setTitle("水平抖动", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         return button
     }()
     private lazy var shakeVerticalBtn: UIButton = {
-        let button = UIButton.init(type: UIButtonType.custom)
+        let button = UIButton.init(type: .custom)
         button.backgroundColor = UIColor.gray
         button.setTitle("垂直抖动", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
@@ -40,14 +40,18 @@ class ViewController: UIViewController {
     }
     
     @objc private func shakeHorizontalEevent(button: UIButton){
+        
         button.shake(directyion: .horizontal, times: 5, interval: 0.1, detal: 2) {
             print("finish shake")
         }
+ 
     }
     @objc private func shakeVerticalEevent(button: UIButton){
+        
         button.shake(directyion: .vertical, times: 5, interval: 0.1, detal: 2) {
             print("finish shake")
         }
+
     }
 
     override func didReceiveMemoryWarning() {
